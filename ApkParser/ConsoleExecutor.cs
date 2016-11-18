@@ -19,7 +19,10 @@ namespace ApkParser
                 StartInfo =
                 {
                     UseShellExecute = false,
+                    CreateNoWindow = true,
                     RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    WindowStyle = ProcessWindowStyle.Hidden,
                     WorkingDirectory = Directory.GetCurrentDirectory(),
                     FileName = command,
                     Arguments = string.Join(" ", args)
